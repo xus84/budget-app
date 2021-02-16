@@ -4,6 +4,12 @@ const cancelBtn = document.querySelector('btn-cancel');
 const confirmBtn = document.querySelector('#btn-confirm');
 const expensesList = document.querySelector('#expenses-list');
 
+const clear = () => {
+    reasonInput.value = '';
+    amountInput.value = '';
+};
+
+
 confirmBtn.addEventListener('click', () => {
     const enteredReason = reasonInput.value;
     const enteredAmount = amountInput.value;
@@ -19,4 +25,8 @@ confirmBtn.addEventListener('click', () => {
     newItem.textContent = enteredReason + ': $' + enteredAmount;
 
     expensesList.appendChild(newItem);
+
+    clear();
 });
+
+cancelBtn.addEventListener('click', clear);

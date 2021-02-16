@@ -35,9 +35,13 @@
                                 </ion-item>
                                 <div margin-vertical text-right> 
                                     <ion-button fill="outline" color="danger" id="btn-cancel">
-                                        <ion-icon slot="start" name="close"></ion-icon>Clear</ion-button>
+                                        <ion-icon slot="start" name="close"></ion-icon>
+                                        Clear
+                                    </ion-button>
                                     <ion-button id="btn-confirm">
-                                        <ion-icon slot="start" name="add"></ion-icon>Add Expense</ion-button>
+                                        <ion-icon slot="start" name="add"></ion-icon>
+                                        Add Expense
+                                    </ion-button>
                                 </div>
                             </ion-card-content>
                         </ion-card>
@@ -46,6 +50,11 @@
                 <ion-row>
                     <ion-col>
                         <ion-list id="expenses-list"></ion-list>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                        <p>Total Expenses: <span id="total-expenses"></span></p>
                     </ion-col>
                 </ion-row>
             </ion-grid>
